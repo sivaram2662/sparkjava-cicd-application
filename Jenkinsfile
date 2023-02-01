@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('CD') {
+        stage('CI') {
             steps {
                sh '/opt/maven38/bin/mvn clean package'
                sh 'mv target/sparkjava-hello-world-1.0.war target/sparkjava-hello-world-$BUILD_NUMBER.war'
